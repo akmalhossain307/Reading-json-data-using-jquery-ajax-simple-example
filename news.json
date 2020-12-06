@@ -1,0 +1,18 @@
+{
+"news":[
+			{
+			"id":1,
+			"title":"This is news title 1"
+			},
+			{
+			"id":2,
+			"title":"This is news title 2"
+			},{
+			"id":3,
+			"title":"This is news title 3"
+			},{
+			"id":4,
+			"title":"This is news title 4"
+			}
+	   ]
+}

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Page Title</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<style> 
+
+
+</style>
+</head>
+<body>
+
+
+<table id="newsTable">
+	<thead>
+		<th>Id</th>
+		<th>Title</th>
+	</thead>
+	<tbody id="newsBody"></tbody>
+</table>
+
+<br><br>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	<script> 
+	/*
+		$.getJSON("news.json", function(data)
+			{
+			console.log(data.news);
+			});
+		*/	
+
+		$.ajax(
+			{
+				url:'news.json',
+				type:'json',
+				method:'get',
+				cache:false,
+				success:function(data)
+				{
+					var html = '';
+					$(data.news).each(function(i, v){
+
+						html += '<tr>'+
+		                  		'<td>'+v.id+'</td>'+
+		                        '<td>'+v.title+'</td>'+
+		                        '</tr>';
+
+					})
+		            $('#newsBody').html(html);
+
+
+
+
+
+				}
+			}
+		);
+
+
+
+
+
+	</script>
+</body>
+</html>
